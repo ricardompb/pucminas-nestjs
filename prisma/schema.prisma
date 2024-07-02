@@ -25,4 +25,5 @@ model Cliente {
   bairro String @db.VarChar(100)
   cidade String @db.VarChar(100)
   estado String @db.VarChar(100)
+  cep String @db.VarChar(12) @default("01001000")
 }

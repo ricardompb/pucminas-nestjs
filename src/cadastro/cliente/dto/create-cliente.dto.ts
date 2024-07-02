@@ -13,6 +13,9 @@ export class CreateClienteDto {
   @ApiProperty({ description: 'E-mail' })
   email: string;
 
+  @ApiProperty({ description: 'Cep', required: false })
+  cep: string;
+
   @ApiProperty({ description: 'Endereço', required: false })
   endereco: string;
 

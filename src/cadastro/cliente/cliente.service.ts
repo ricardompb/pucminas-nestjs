@@ -34,8 +34,8 @@ export class ClienteService {
   }
 
   remove(id: number) {
-    // Desafio valendo ponto
-    // this.prisma.cliente.delete({ args })
-    return `This action removes a #${id} cliente`;
+    return this.prisma.cliente.delete({
+      where: { id },
+    });
   }
 }

@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE "Cliente" ADD COLUMN     "cep" VARCHAR(12) NOT NULL DEFAULT '01001000';
