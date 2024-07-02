@@ -5,7 +5,7 @@ import {
   Body,
   Patch,
   Param,
-  Delete 
+  Delete,
 } from '@nestjs/common';
 import { ClienteService } from './cliente.service';
 import { CreateClienteDto } from './dto/create-cliente.dto';
