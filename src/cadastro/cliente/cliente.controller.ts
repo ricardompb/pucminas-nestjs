@@ -6,14 +6,18 @@ import {
   Patch,
   Param,
   Delete,
+  UseGuards,
 } from '@nestjs/common';
 import { ClienteService } from './cliente.service';
 import { CreateClienteDto } from './dto/create-cliente.dto';
 import { UpdateClienteDto } from './dto/update-cliente.dto';
-import { ApiTags } from '@nestjs/swagger';
+import { ApiTags, ApiBearerAuth } from '@nestjs/swagger';
+import { ClienteGuard } from './cliente.guard';
 
+@ApiBearerAuth()
 @ApiTags('Cadastro')
 @Controller('cliente')
+@UseGuards(ClienteGuard)
 export class ClienteController {
   constructor(private readonly clienteService: ClienteService) {}
 
