@@ -26,4 +26,14 @@ export class UsersService {
       where: { id },
     });
   }
+
+  findAll() {
+    return this.prisma.user.findMany();
+  }
+
+  find(id: number) {
+    return this.prisma.user.findUnique({
+      where: { id },
+    });
+  }
 }
